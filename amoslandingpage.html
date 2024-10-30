@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieDelight - Delicious Food Delivered</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ea580c;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ea580c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f8f8f8;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10%;
+
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            
+        }
+
+        .hero .orange {
+            color: #ea580c;
+        }
+
+        .hero p {
+            color: #6b7280;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: #ea580c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c2410c;
+        }
+
+        /* Featured Items */
+        .featured {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .featured h2 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin-bottom: 2rem;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            
+        }
+
+        .food-card {
+            background: rgba(149, 149, 149, 0.312);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-image {
+            height: 200px;
+            width: 100%;
+            background: #f3f4f6;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 1.5rem;
+        }
+
+        .food-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 1.25rem;
+            padding-top: 5%;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+        .love {
+            color: red;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                padding-bottom: 50%;
+                padding-top: 50%;
+            }
+
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">amosdimsum</div>
+            <div class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dimsum <br><span class="orange">with</span> <span class="love">love</span></h1>
+            <p>Dim sum made by university students in Surakarta. Currently, our dim sum is available exclusively in Surakarta.</p>
+            <button class="cta-button">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="featured" id="menu">
+        <h2>dimsum</h2>
+        <div class="food-grid">
+            <!-- Food Card 1 -->
+            <div class="food-card">
+                <img src="kuliner-dimsumm-ok.jpg"  class="food-image"alt="pict">
+                <div class="food-info">
+                    <h3>original shumai</h3>
+                    <p>original shumai  with carrot topping</p>
+                    <div class="price">2500 </div>
+                </div>
+            </div>
+
+            <!-- Food Card 2 -->
+            <div class="food-card">
+                <img src="kuliner-dimsumm-ok.jpg"  class="food-image"alt="pict">
+
+                <div class="food-info">
+                    <h3>shumai sausage</h3>
+                    <p>shumai with sausage</p>
+                    <div class="price">2500</div>
+                </div>
+            </div>
+
+            <!-- Food Card 3 -->
+            <div class="food-card">
+                <img src="deep-fried-dim-sum-ekado-lumpia-rustic-square-plate-various-shape_511235-5193.avif"  class="food-image"alt="pict">
+                <div class="food-info">
+                    <h3>fried shumai</h3>
+                    <p>original shumai get fried</p>
+                    <div class="price">3000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" id="about">
+                <h3>About Us</h3>
+                <p> this is just a catalog
+                </p>
+            </div>
+            <div class="footer-section" id="Contact">
+                <h3>Contact</h3>
+                <p>Email: amosdimsumexample@gmail.com</p>
+                <p>Phone: 291923892</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
